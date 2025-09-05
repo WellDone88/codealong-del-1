@@ -18,6 +18,7 @@ Går tallet OVER 55, skal “Game Over” dukke opp. -->
 <button onclick="add(9)">9</button>
 
 <div id="sum"></div>
+<div id="winOrLooseText"></div>
 
 <script>
 
@@ -28,8 +29,20 @@ function add(para) {
     number += para;
     numberOfclicks++;
     document.getElementById('sum').innerHTML = number;
+    WinOrLooseText()
 
 } 
+
+function WinOrLooseText() {
+    if(number === 55)
+    alert(`Winner Winner chicken dinner! You used ${numberOfclicks}clicks`)
+    
+    else if (number > 55 ){
+        alert(`Game over man! You used ${numberOfclicks}clicks`)
+
+    }
+
+}
 
 
 
